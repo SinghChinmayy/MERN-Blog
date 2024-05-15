@@ -4,7 +4,7 @@ import logo from "../imgs/logo.png";
 const Navbar = () => {
     return(
 
-        // Logo JSX 
+       // Logo
         <nav className="navbar">
             <Link to="/" className="flex-none w-10"> {/*tailwind React router dom to redirect page to home and when page is at home it will simplybe at home without reloading */}
                 <img src={logo} className="w-full"/>
@@ -13,7 +13,7 @@ const Navbar = () => {
             {/* 
             *
             *
-            Search Bar 
+                                                    Search Bar 
             *
             *
              */}
@@ -28,7 +28,7 @@ const Navbar = () => {
                 className="w-full md:w-auto bg-grey p-4 pl-6 pr-[12%]
                 md:pr-6 rounded-full placeholder:text-dark-grey md:pl-12" 
                 
-            /> 
+            />  
 
                 {/* Flat icon */}
                 <i className="fi fi-rr-search absolute right-[10%]
