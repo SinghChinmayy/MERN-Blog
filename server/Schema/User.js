@@ -16,9 +16,11 @@ const userSchema = mongoose.Schema({
             type: String,
             required: true,
             lowercase: true,
+            // using mongodb unique property to check that the email is unique
             unique: true
         },
         password: String,
+        // dynamic username is crated to create profile root for user
         username: {
             type: String,
             minlength: [3, 'Username must be 3 letters long'],

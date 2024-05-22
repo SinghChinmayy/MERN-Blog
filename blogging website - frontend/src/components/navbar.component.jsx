@@ -1,4 +1,5 @@
-import { Link } from "react-router-dom";
+// Outlet is used for rendering nested router in react
+import { Link, Outlet } from "react-router-dom";
 import logo from "../imgs/logo.png";
 import { useState } from "react";
 
@@ -8,8 +9,11 @@ const Navbar = () => {
 
 
     return(
-
-       // Logo
+        // empty tag is used for rendering more than one element in react
+        // i.e. navbar and outlet
+        <>
+        
+       {/*  Logo */}
         <nav className="navbar">
             <Link to="/" className="flex-none w-10"> {/*tailwind React router dom to redirect page to home and when page is at home it will simplybe at home without reloading */}
                 <img src={logo} className="w-full"/>
@@ -48,16 +52,21 @@ const Navbar = () => {
                     </p>
                 </Link>
                 
-                <Link className="btn-dark py-2 hidden md:flex" to="/signin" >
+                <Link className="btn-dark py-2  md:flex" to="/signin" >
                     Sign In
                 </Link>
-                <Link className="btn-light py-2 hidden md:block" to="/signup">
+                <Link className="btn-light py-2  md:block" to="/signup">
                     Sign Up
                 </Link>
 
            </div>
            
         </nav>
+        {/* Outlet is for nested router in App.jsx 
+        Outlet maks sure that nested compnents get rendered
+        */}
+        <Outlet />
+        </>
     )
 }
 
